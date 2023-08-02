@@ -1,6 +1,7 @@
 package app.lacabra
 
 import app.lacabra.events.EventManager
+import app.lacabra.io.CommandManager
 import app.lacabra.io.dotenv
 import dev.minn.jda.ktx.jdabuilder.injectKTX
 import net.dv8tion.jda.api.entities.Activity
@@ -17,6 +18,7 @@ object Main {
 
     lateinit var shards: ShardManager
     private val logger = LoggerFactory.getLogger(Main::class.java)
+    val commands = CommandManager()
 
     @JvmStatic
     fun main(args: Array<String>) {

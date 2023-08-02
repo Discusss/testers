@@ -12,5 +12,6 @@ class EventManager(
     init {
         logger.info("Registering discord events...")
         ShardHandler(shards)
+        SlashHandler(shards)
     }
 }
