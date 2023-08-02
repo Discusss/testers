@@ -5,6 +5,8 @@ build/
 !**/src/test/**/build/
 .env
 logs
+config.yaml
+config.yml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

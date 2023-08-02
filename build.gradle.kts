@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "1.9.0"
     java
     application
+    kotlin("plugin.serialization") version "1.4.20"
 }
 
 group = "app.lacabra"
@@ -20,11 +21,16 @@ dependencies {
 
     implementation("ch.qos.logback:logback-classic:1.4.8")
     implementation("io.github.classgraph:classgraph:4.8.161")
+    implementation("com.charleskorn.kaml:kaml:0.55.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("net.dv8tion:JDA:5.0.0-beta.12")
     implementation("com.github.minndevelopment:jda-ktx:0.10.0-beta.1")
-    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
+
+    implementation("com.zaxxer:HikariCP:5.0.1")
+    implementation("org.postgresql:postgresql:42.6.0")
+    implementation("org.jetbrains.exposed:exposed-core:0.41.1")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.41.1")
 
 }
 

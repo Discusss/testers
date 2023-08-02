@@ -1,8 +1,9 @@
 package app.lacabra
 
+import app.lacabra.config.Config
+import app.lacabra.db.Postgres
 import app.lacabra.events.EventManager
 import app.lacabra.io.CommandManager
-import app.lacabra.io.dotenv
 import dev.minn.jda.ktx.jdabuilder.injectKTX
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.requests.GatewayIntent
@@ -16,12 +17,16 @@ import kotlin.system.exitProcess
 
 object Main {
 
-    lateinit var shards: ShardManager
+    private lateinit var shards: ShardManager
     private val logger = LoggerFactory.getLogger(Main::class.java)
+    @Suppress("unused")
     val commands = CommandManager()
+    val config = Config().data
 
     @JvmStatic
     fun main(args: Array<String>) {
+
+        Postgres().connect()
 
         // this disables all cache flags and gateway intents
         val builder = DefaultShardManagerBuilder.createLight(null, EnumSet.noneOf(GatewayIntent::class.java))
@@ -30,7 +35,7 @@ object Main {
         builder.setBulkDeleteSplittingEnabled(true)
         builder.setCompression(Compression.ZLIB)
         builder.setActivity(Activity.watching("lacabra.app"))
-        builder.setToken(dotenv.TOKEN)
+        builder.setToken(config.token)
 
         builder.setLargeThreshold(50)
 

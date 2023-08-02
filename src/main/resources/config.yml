@@ -1,0 +1,16 @@
+
+token: # El token del bot de discord. (https://discord.com/developers/applications)
+
+guild_id: 577422001850023946 # La ID del servidor de discord donde se ejecutará el bot.
+
+database:
+  host: postgres://localhost:5432/testers # La dirección del host de la base de datos
+  username: testers # El usuario de la base de datos.
+  password: testers # La contraseña de la base de datos.
+
+admins: # Las IDs de los usuarios o roles que tendrán acceso a los comandos de administración.
+  - 396683727868264449
+
+testers: # Las IDs de los usuarios o roles que tendrán acceso a los comandos de testers.
+  - 663011364452696076
+
