@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
 
-    implementation("ch.qos.logback:logback-classic:1.4.4")
+    implementation("ch.qos.logback:logback-classic:1.4.8")
     implementation("io.github.classgraph:classgraph:4.8.161")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
