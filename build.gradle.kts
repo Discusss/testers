@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.9.0"
     java
     application
-    kotlin("plugin.serialization") version "1.4.20"
+    kotlin("plugin.serialization") version "1.9.0"
 }
 
 group = "app.lacabra"
