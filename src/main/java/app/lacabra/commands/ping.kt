@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData
 class ping: Command {
 
     override suspend fun hook(event: SlashCommandInteractionEvent) {
-        event.reply(":ping_pong:  pong!").queue()
+        event.reply(":ping_pong:  pong!").setEphemeral(true).queue()
     }
 
     override val name: String = "ping"

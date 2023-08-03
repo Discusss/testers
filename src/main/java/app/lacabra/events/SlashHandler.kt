@@ -16,7 +16,9 @@ class SlashHandler(shards: ShardManager) {
             if (event.isAcknowledged) return@listener
 
             if (!event.isFromGuild || event.guild!!.id != config.guild_id) {
-                event.reply("Este bot no puede ser usado fuera del servidor principal").queue()
+                event.reply("Este bot no puede ser usado fuera del servidor principal")
+                    .setEphemeral(true)
+                    .queue()
                 return@listener
             }
 
