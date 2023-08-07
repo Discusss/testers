@@ -24,7 +24,7 @@ dependencies {
     implementation("com.charleskorn.kaml:kaml:0.55.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation("net.dv8tion:JDA:5.0.0-beta.12")
+    implementation("net.dv8tion:JDA:5.0.0-beta.13")
     implementation("com.github.minndevelopment:jda-ktx:0.10.0-beta.1")
 
     implementation("com.zaxxer:HikariCP:5.0.1")
