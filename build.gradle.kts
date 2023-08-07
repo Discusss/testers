@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
 
-    implementation("ch.qos.logback:logback-classic:1.4.8")
+    implementation("ch.qos.logback:logback-classic:1.4.9")
     implementation("io.github.classgraph:classgraph:4.8.161")
     implementation("com.charleskorn.kaml:kaml:0.55.0")
 
