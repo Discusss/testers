@@ -20,7 +20,7 @@ repositories {
 dependencies {
 
     implementation("ch.qos.logback:logback-classic:1.4.8")
-    implementation("io.github.classgraph:classgraph:4.8.161")
+    implementation("io.github.classgraph:classgraph:4.8.162")
     implementation("com.charleskorn.kaml:kaml:0.55.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
