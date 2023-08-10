@@ -2,13 +2,13 @@ package app.lacabra.io
 
 import app.lacabra.interfaces.Command
 import app.lacabra.io.Clazz.getCommandsOfClass
+import dev.minn.jda.ktx.util.SLF4J
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
-import org.slf4j.LoggerFactory
 
 class CommandManager {
 
     val commands: MutableMap<String, Command> = mutableMapOf()
-    private val logger = LoggerFactory.getLogger(CommandManager::class.java)
+    private val logger by SLF4J
 
     init {
         if (instance != null)

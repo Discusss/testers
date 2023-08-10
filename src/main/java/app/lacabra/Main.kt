@@ -5,20 +5,21 @@ import app.lacabra.db.Postgres
 import app.lacabra.events.EventManager
 import app.lacabra.io.CommandManager
 import dev.minn.jda.ktx.jdabuilder.injectKTX
+import dev.minn.jda.ktx.util.SLF4J
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.requests.GatewayIntent
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder
 import net.dv8tion.jda.api.sharding.ShardManager
 import net.dv8tion.jda.api.utils.Compression
 import net.dv8tion.jda.api.utils.messages.MessageRequest
-import org.slf4j.LoggerFactory
 import java.util.EnumSet
 import kotlin.system.exitProcess
 
 object Main {
 
     private lateinit var shards: ShardManager
-    private val logger = LoggerFactory.getLogger(Main::class.java)
+    private val logger by SLF4J
+
     @Suppress("unused")
     val commands = CommandManager()
     val config = Config().data

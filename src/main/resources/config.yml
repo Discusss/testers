@@ -14,3 +14,6 @@ admins: # Las IDs de los usuarios o roles que tendrán acceso a los comandos de 
 testers: # Las IDs de los usuarios o roles que tendrán acceso a los comandos de testers.
   - 663011364452696076
 
+reports:
+  channel_id: # La ID del canal de discord donde se enviarán los reportes.
+  role_mention: # La mención del rol que se mencionará cuando se cree un reporte, si no se quiere mencionar a nadie, dejar vacío.

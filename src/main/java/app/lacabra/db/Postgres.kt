@@ -3,16 +3,16 @@ package app.lacabra.db
 import app.lacabra.Main.config
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
+import dev.minn.jda.ktx.util.SLF4J
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
-import org.slf4j.LoggerFactory
 import kotlin.system.exitProcess
 
 class Postgres {
 
     private lateinit var database: Database
-    private val logger = LoggerFactory.getLogger(Postgres::class.java)
+    private val logger by SLF4J
 
     private fun hikariPg(): HikariDataSource {
 

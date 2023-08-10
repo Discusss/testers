@@ -2,7 +2,7 @@ package app.lacabra.config
 
 import app.lacabra.io.ResourceManager
 import com.charleskorn.kaml.Yaml
-import org.slf4j.LoggerFactory
+import dev.minn.jda.ktx.util.SLF4J
 import java.io.File
 import kotlin.system.exitProcess
 
@@ -10,7 +10,7 @@ import kotlin.system.exitProcess
 class Config {
 
     private val file: File
-    private val logger = LoggerFactory.getLogger(Config::class.java)
+    private val logger by SLF4J
     var data: Data
 
     init {

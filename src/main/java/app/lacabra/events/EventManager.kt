@@ -1,17 +1,17 @@
 package app.lacabra.events
 
+import dev.minn.jda.ktx.util.SLF4J
 import net.dv8tion.jda.api.sharding.ShardManager
-import org.slf4j.LoggerFactory
 
 class EventManager(
     shards: ShardManager
 ) {
 
-    private val logger = LoggerFactory.getLogger(EventManager::class.java)
+    private val logger by SLF4J
 
     init {
         logger.info("Registering discord events...")
         ShardHandler(shards)
-        SlashHandler(shards)
+        InteractionHandler(shards)
     }
 }

@@ -2,18 +2,18 @@ package app.lacabra.events
 
 import app.lacabra.io.CommandManager
 import dev.minn.jda.ktx.events.listener
+import dev.minn.jda.ktx.util.SLF4J
 import net.dv8tion.jda.api.events.guild.GuildAvailableEvent
 import net.dv8tion.jda.api.events.guild.GuildUnavailableEvent
 import net.dv8tion.jda.api.events.session.ReadyEvent
 import net.dv8tion.jda.api.events.session.ShutdownEvent
 import net.dv8tion.jda.api.sharding.ShardManager
-import org.slf4j.LoggerFactory
 
 class ShardHandler(
     shards: ShardManager
 ) {
 
-    private val logger = LoggerFactory.getLogger(ShardHandler::class.java)
+    private val logger by SLF4J
 
     init {
 

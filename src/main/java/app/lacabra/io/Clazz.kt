@@ -1,13 +1,13 @@
 package app.lacabra.io
 
 import app.lacabra.interfaces.Command
+import dev.minn.jda.ktx.util.SLF4J
 import io.github.classgraph.ClassGraph
-import org.slf4j.LoggerFactory
 
 object Clazz {
 
     private const val COMMANDS_PACKAGE = "app.lacabra.commands"
-    private val logger = LoggerFactory.getLogger(Clazz::class.java)
+    private val logger by SLF4J
 
     fun getCommandsOfClass(clazz: Class<out Command>): List<Command> {
         val list = mutableListOf<Command>()
